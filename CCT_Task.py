@@ -30,7 +30,7 @@ def find_maximum_distance( number_of_cities: int, cities_with_train_station: Lis
     for ind in range(1, len(cities_with_train_station)): # We calculate the distance between all the train stations
         res = max(res, (cities_with_train_station[ind] - cities_with_train_station[ind-1]) // 2 ) # "//" is used for integers
         
-    res = max(res, number_of_cities-1 - cities_with_train_station[-1]) #to compare my current maximum distance with the from the last city to the last train station
+    res = max(res, number_of_cities-1 - cities_with_train_station[-1]) # To compare my current maximum distance with the distance from the last city to the last train station
 
     return res
 
